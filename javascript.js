@@ -19,24 +19,22 @@ console.log (playerSelection === computerSelection);
         prompt("Please select: Rock, Paper, or Scissors");
     }
 */
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "scissors") { 
-        alert ("You win: Rock crushes scissors!");
+function playRound() {
+    if (computerSelection === playerSelection) {
+        alert ("It's a tie: ".concat(playerSelection + " vs " + computerSelection + "!"));
+    } else if (playerSelection === "rock" && computerSelection === "scissors") { 
+        alert ("You win: rock crushes scissors!");
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        alert ("You lose: Paper covers rock!");
-    } else if (playerSelection === "paper" && computerSelection == "scissors") {
-        alert ("You lose: Scissors cut paper!");
+        alert ("You lose: paper covers rock!");
+    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+        alert ("You lose: scissors cut paper!");
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        alert ("You win: Paper covers rock!");
+        alert ("You win: paper covers rock!");
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        alert ("You win: Scissors cut paper!");
+        alert ("You win: scissors cut paper!");
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        alert ("You lose: Rock crushes scissors");
+        alert ("You lose: rock crushes scissors");
     }
 }
 
-playRound()
-
-/*} else if (computerSelection === playerSelection) {
-    alert ("It's a tie: ${playerSelection} vs ${computerSelection}!");
-*/
+playRound(playerSelection, computerSelection)
