@@ -1,13 +1,9 @@
 const gameOptions = ["rock", "paper", "scissors"];
 
-/*
 function getComputerChoice() {
     const computerSelection = gameOptions[Math.floor(Math.random() * gameOptions.length)];
     return computerSelection;
 }
-
-const computerSelection = getComputerChoice();
-console.log("computer chose:"), console.log(computerSelection);
 
 function getPlayerChoice() {
     const playerChoice = prompt("Please select: rock, paper, or scissors");
@@ -15,23 +11,14 @@ function getPlayerChoice() {
     return playerSelection;
 }
 
-console.log("player chose:"), console.log(playerSelection);
-
-    if newPlayerSelection !== ("rock" || "paper" || "scissors"); {
-    alert("try again!");
-        prompt("Please select: Rock, Paper, or Scissors");
-    }
-*/
-
 let x = 0;
 let y = 0;
 let computerScore = x;
 let playerScore = y;
 
 function playRound() {
-    const computerSelection = gameOptions[Math.floor(Math.random() * gameOptions.length)];
-    const playerChoice = prompt("Please select: rock, paper, or scissors");
-    const playerSelection = playerChoice.toLowerCase();
+    const computerSelection = getComputerChoice();
+    const playerSelection = getPlayerChoice();
     if (computerSelection === playerSelection) {
         alert ("It's a tie: ".concat(playerSelection + " vs " + computerSelection + "!"));
     } else if (playerSelection === "rock" && computerSelection === "scissors") { 
